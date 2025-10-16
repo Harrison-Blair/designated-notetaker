@@ -24,7 +24,7 @@ body:
     id: priority
     attributes:
       label: Priority
-      description: How important is this feature?
+      description: How important is this bug?
       options:
         - Critical
         - High
@@ -34,31 +34,21 @@ body:
       required: true
   
   - type: dropdown
-    id: urgency
+    id: story-points
     attributes:
-      label: Urgency
-      description: How time-sensitive is this?
+      label: Story Points
+      description: How complex do you think this fix will be?
       options:
-        - Immediate (this week)
-        - Soon (this month/sprint)
-        - Eventual (when capacity allows)
+        - 0 (Trivial)
+        - 1 (Quick fix)
+        - 2 (Few hours)
+        - 3 (Half day)
+        - 5 (Full day)
+        - 8 (Multi-day)
+        - 13 (Should it really be this big?)
+        - Unknown
     validations:
-      required: false
-  
-  - type: dropdown
-    id: effort
-    attributes:
-      label: Estimated Effort
-      description: Story point estimate or size
-      options:
-        - XS (1 point)
-        - S (2 points)
-        - M (3-5 points)
-        - L (8 points)
-        - XL (13+ points)
-        - Needs breakdown
-    validations:
-      required: false
+      required: true
   
   - type: textarea
     id: user-story

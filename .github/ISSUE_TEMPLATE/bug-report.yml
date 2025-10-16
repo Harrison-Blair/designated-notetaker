@@ -33,43 +33,30 @@ body:
       required: true
   
   - type: dropdown
-    id: effort
+    id: story-points
     attributes:
-      label: Estimated Effort
+      label: Story Points
       description: How complex do you think this fix will be?
       options:
-        - XS (< 1 hour)
-        - S (1-4 hours)
-        - M (1-2 days)
-        - L (3-5 days)
-        - XL (1-2 weeks)
+        - 0 (Trivial)
+        - 1 (Quick fix)
+        - 2 (Few hours)
+        - 3 (Half day)
+        - 5 (Full day)
+        - 8 (Multi-day)
+        - 13 (Should it really be this big?)
         - Unknown
-    validations:
-      required: false
-  
-  - type: dropdown
-    id: browser
-    attributes:
-      label: Browser
-      description: Which browser are you using?
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Edge
-        - Other
     validations:
       required: true
   
   - type: dropdown
-    id: device
+    id: interface
     attributes:
-      label: Device/Breakpoint
-      description: What type of device?
+      label: UI / Interface
+      description: What type of UI?
       options:
-        - Desktop
-        - Tablet
-        - Mobile
+        - Command Line
+        - Desktop App (GUI)
     validations:
       required: true
   

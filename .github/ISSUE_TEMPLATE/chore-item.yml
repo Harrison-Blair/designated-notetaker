@@ -19,16 +19,14 @@ body:
       label: Chore Type
       options:
         - Refactoring
-        - Maintenance
-        - Cleanup
         - Configuration
-        - Dependencies
-        - Other
+        - Continuous Integration
   
-  - type: dropdown
+  - type: dropdown  - type: dropdown
     id: priority
     attributes:
       label: Priority
+      description: How important is this bug?
       options:
         - Critical
         - High
@@ -38,15 +36,21 @@ body:
       required: true
   
   - type: dropdown
-    id: effort
+    id: story-points
     attributes:
-      label: Estimated Effort
+      label: Story Points
+      description: How complex do you think this fix will be?
       options:
-        - XS (< 1 hour)
-        - S (1-4 hours)
-        - M (1-2 days)
-        - L (3-5 days)
-        - XL (1-2 weeks)
+        - 0 (Trivial)
+        - 1 (Quick fix)
+        - 2 (Few hours)
+        - 3 (Half day)
+        - 5 (Full day)
+        - 8 (Multi-day)
+        - 13 (Should it really be this big?)
+        - Unknown
+    validations:
+      required: true
   
   - type: textarea
     id: justification
@@ -56,16 +60,16 @@ body:
     validations:
       required: true
   
-  - type: checkboxes
+  - type: textarea
     id: done-criteria
     attributes:
       label: Definition of Done
-      description: Check all that apply when complete
-      options:
-        - label: Code changes complete
-        - label: Tests added/updated
-        - label: Documentation updated
-        - label: Reviewed and approved
+      description: What needs to be done?
+      placeholder: |
+        - Code changes complete
+        - Tests added/updated
+        - Documentation updated
+        - Reviewed and approved
   
   - type: textarea
     id: related-items
