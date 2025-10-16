@@ -25,10 +25,10 @@ body:
       label: Priority
       description: How important is this bug?
       options:
-        - Critical
-        - High
-        - Medium
         - Low
+        - Medium
+        - High
+        - Critical
     validations:
       required: true
   
@@ -38,6 +38,7 @@ body:
       label: Story Points
       description: How complex do you think this fix will be?
       options:
+        - Unknown
         - 0 (Trivial)
         - 1 (Quick fix)
         - 2 (Few hours)
@@ -45,7 +46,6 @@ body:
         - 5 (Full day)
         - 8 (Multi-day)
         - 13 (Should it really be this big?)
-        - Unknown
     validations:
       required: true
   
