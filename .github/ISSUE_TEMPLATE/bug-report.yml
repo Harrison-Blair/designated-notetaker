@@ -1,0 +1,134 @@
+name: Bug Report
+description: Report an issue or unintended functionality
+title: "Bug | [Description]"
+labels: ["bug"]
+assignees:
+  - Harrison-Blair
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this bug!
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Describe what erroneous functionality is taking place
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this bug?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: How complex do you think this fix will be?
+      options:
+        - XS (< 1 hour)
+        - S (1-4 hours)
+        - M (1-2 days)
+        - L (3-5 days)
+        - XL (1-2 weeks)
+        - Unknown
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser are you using?
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device/Breakpoint
+      description: What type of device?
+      options:
+        - Desktop
+        - Tablet
+        - Mobile
+    validations:
+      required: true
+  
+  - type: input
+    id: other-info
+    attributes:
+      label: Other Information
+      description: Any other relevant technical details
+      placeholder: "OS version, screen size, etc."
+  
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: Clear steps to reproduce the bug
+      placeholder: |
+        1. Step 1
+        2. Step 2
+        3. Step 3
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+  
+  - type: textarea
+    id: intended
+    attributes:
+      label: Intended Functionality
+      description: Describe what SHOULD be happening instead
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Error Logs
+      description: Add any screenshots, error messages, or console output
+      placeholder: Drag and drop images here or paste error logs
+  
+  - type: textarea
+    id: related-items
+    attributes:
+      label: Related Work Items
+      description: Link to related issues or PRs
+      placeholder: "#123, #456"
+  
+  - type: input
+    id: wiki
+    attributes:
+      label: Wiki Reference
+      description: Link to relevant wiki documentation
+      placeholder: "https://..."
+  
+  - type: input
+    id: useful-links
+    attributes:
+      label: Useful Links
+      description: Any other helpful resources
+      placeholder: "https://..."
