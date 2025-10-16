@@ -2,8 +2,6 @@ name: Research Request
 description: A Request to look into something
 title: "Research | [Description]"
 labels: ["request"]
-assignees:
-  - Harrison-Blair
 body:
   - type: markdown
     attributes:
