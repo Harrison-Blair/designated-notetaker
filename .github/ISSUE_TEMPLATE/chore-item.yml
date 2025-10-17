@@ -22,7 +22,7 @@ body:
         - Configuration
         - Continuous Integration
   
-  - type: dropdown  - type: dropdown
+  - type: dropdown
     id: priority
     attributes:
       label: Priority
